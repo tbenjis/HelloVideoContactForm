@@ -7,6 +7,6 @@ Copy the `contact` folder to the plugin folder in HelloVideo and create a new me
 #Check
 The plugin uses "noty" for displaying messages. Make sure you already have this setup in your theme or just include `jquery.noty.packaged.min.js` to your themes footer.
 
-Check installation here: http://ned.im/noty/
+Check noty installation here: http://ned.im/noty/
 
 
