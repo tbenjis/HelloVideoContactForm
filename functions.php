@@ -7,7 +7,7 @@ Route::get('contact', function(){
 					return array($data->key, $data->value);
 			})
 	);
-	// Show the file located in /content/plugins/hello/views/index.php
+	// Show the file located in /content/plugins/contact/views/index.php
 	return View::make('plugins::contact.views.index', $data);
 
 });
@@ -45,9 +45,11 @@ Route::post('contact_send', function() {
 				//print($data['plugin_data']->email);
 			try{
 				//senf contact mail
-				Mail::raw("Name: ". $user_data['fullname'] . "<br/>Email:" . $user_data['email'] . "<br/>Message:" . $user_data['message'], function($message)  use($data, $user_data) {
-							$message->to($data['plugin_data']->email, "Agricdemy")->subject("Contact: " . $user_data['subject']);
-					 });
+
+				Mail::send([], [], function ($message) use($data, $user_data) {
+					$message->to($data['plugin_data']->email, "Admin")->subject("Contact Form: " . $user_data['subject'])
+				    ->setBody("<b>Name:</b> ". $user_data['fullname'] . "<br/><b>Email:</b>" . $user_data['email'] . "<br/><b>Message:</b>" . $user_data['message'], 'text/html'); // for HTML rich messages
+				});
 				//send message
 				$msg['note'] = '<b>Your email has been sent successfully!.</b>';
 				$msg['note_type'] = 'success';

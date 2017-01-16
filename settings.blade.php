@@ -14,13 +14,13 @@
 			<div class="panel-title">Plugin Settings</div> <div class="panel-options"> <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a> </div></div>
 			<div class="panel-body" style="display: block;">
 
-				<p>Email:</p>
+				<p>Email (sends mail to this email and displays it on form):</p>
 				<input type="text" class="form-control" name="email" value="@if(isset($email)){{ $email }}@endif" />
 				<br />
-				<p>Phone:</p>
+				<p>Phone (leave blank if you wish):</p>
 				<input type="text" class="form-control" name="phone" value="@if(isset($phone)){{ $phone }}@endif" />
 				<br />
-				<p>Address:</p>
+				<p>Address (leave blank if you wish):</p>
 				<input type="text" class="form-control" name="address" value="@if(isset($address)){{ $address }}@endif" />
 				<br />
 				<p>Header Text:</p>
