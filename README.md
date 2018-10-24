@@ -1,5 +1,5 @@
 # HelloVideoContactForm
-Contact form plugin for HelloVideo
+Contact form plugin for HelloVideo https://codecanyon.net/item/hellovideo-video-cms/11149598
 
 ## Usage
 Copy the `contact` folder to the plugin folder in HelloVideo and create a new menu from your admin page with the url `/contact`
