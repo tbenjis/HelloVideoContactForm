@@ -1,4 +1,4 @@
-# HelloVideoContactForm
+# HelloVideo Contact Form Plugin
 Contact form plugin for HelloVideo https://codecanyon.net/item/hellovideo-video-cms/11149598
 
 ## Usage
